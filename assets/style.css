@@ -1,0 +1,28 @@
+.sidenav {
+    height: 100%; 
+    width: 250px; 
+    position: fixed; 
+    z-index: 1; 
+    top: 0; 
+    left: 0;
+    background-color: rgb(247, 239, 239); 
+    overflow-x: hidden; 
+    padding-top: 20px;
+  }
+
+  .main {
+    margin-left: 160px; 
+    padding: 0px 10px;
+  }
+
+  h1{
+
+    text-align: center;
+    color: rgb(68, 65, 65);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+
+  cityButton{
+
+    width: 100px;
+  }
