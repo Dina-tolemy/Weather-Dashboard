@@ -12,13 +12,49 @@
     </style>
 </head>
 <body>
-
+        <h1> Weather Dashboard</h1>
     <div class="sidenav">
         <input id="userCity">
         <button id="searchButton">Search</button>
     </div>
-    <div class="main">
-        <h1> Weather Search</h1>
+    <div class="main">  
+        <div class="mainInfo">
+            <h2 id="cityName">City name</h2>
+            <div id="cityTemp">City temp</div>
+            <div id="cityHumidity">City Humidity</div>
+            <div id="cityWindSpeed">City wind speed</div>
+            <div id="cityUV">City UV index</div>  
+        </div>
+        <div class= container>
+            <div class=row>
+                <div class="col lg=2" id="fDay">
+                    <p id="fDayWeather"> Day1</p>
+                    <p id="fDayHumidity"></p>
+                    <p id="fDayUv"></p>
+                </div>
+                <div class="col lg=2" id="secDay">
+                        <p id="secDayWeather"> Day2</p>
+                        <p id="secDayHumidity"></p>
+                        <p id="secDayUv"></p>
+                </div>
+                <div class="col lg=2" id="thDay">
+                        <p id="thirdDayWeather"> Day3</p>
+                        <p id="thirdDayHumidity"></p>
+                        <p id="thirdDayUv"></p>
+                </div>
+                <div class="col lg=2" id="forthDay">
+                        <p id="forthDayWeather"> Day4</p>
+                        <p id="forthDayHumidity"></p>
+                        <p id="forthDayUv"></p>
+                </div>
+                <div class="col lg=2" id="fifthDay">
+                        <p id="fifthDayWeather"> Day5</p>
+                        <p id="fifthDayHumidity"></p>
+                        <p id="fifthDayUv"></p>
+                </div>
+            </div>
+        </div>
+
     </div>
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
