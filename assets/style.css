@@ -9,19 +9,21 @@
   overflow-x: hidden;
   padding-top: 20px;
 }
-
+ul{
+  border-radius:.5em solid gray ;
+  list-style-type: none;
+  margin: 5px;
+}
 .main {
   margin-left: 250px;
   padding: 0px 10px;
 }
-
 .mainInfo {
   border: 1px solid rgb(111, 113, 114);
   border-radius: .5em;
   margin: 20px;
   padding: 20px;
 }
-
 h1 {
   padding: 10px;
   text-align: center;
@@ -30,20 +32,17 @@ h1 {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   height: 80px;
 }
-
 #fDay, #secDay, #thDay, #forthDay, #fifthDay {
-  background-color: rgb(8, 8, 240);
+  background-color: rgb(6, 6, 248);
   margin: 10px;
   border-radius: .5em;
   color: white;
   padding: 10px;
   font-size: 20px;
 }
-
 #cityTemp, #cityHumidity, #cityWindSpeed, #cityUV {
   padding: 7px;
 }
-
 cityButton {
   width: 100px;
 }
