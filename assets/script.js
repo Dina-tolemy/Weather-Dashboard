@@ -4,13 +4,11 @@ var cloudIcon = "https://image.flaticon.com/icons/png/512/1163/1163624.png";
 var rainIcon = "https://image.flaticon.com/icons/png/512/1375/1375394.png";
 var sunnyIcon = "https://image.flaticon.com/icons/png/512/861/861060.png";
 var PartlySunnyIcon = "https://image.flaticon.com/icons/png/512/1146/1146869.png";
-
 $("#searchButton").on("click", function (event) {
   event.preventDefault();
   displayCityButton();
   displayCityWeather();
 });
-
 function displayCityButton() {
   var city = $("#userCity").val().trim();
   var citylink = $("<li>");
@@ -73,7 +71,7 @@ function setDaysOfWeek(response) {
   for (var i = 1; i < 6; i++) {
     var currentDate = new Date();
     currentDate.setDate(currentDate.getDate() + i);
-    currentDate.setHours(9, 0, 0);
+    currentDate.setHours(3, 0, 0);
     var formattedDate = moment(currentDate).format("YYYY-MM-DD HH:mm:ss");
     var item = response.list.filter(x => x.dt_txt === formattedDate)[0];
     const divId = "#day" + i + "date";

@@ -13,6 +13,7 @@ ul{
   border-radius:.5em solid gray ;
   list-style-type: none;
   margin: 5px;
+  cursor: pointer;
 }
 .main {
   margin-left: 250px;
@@ -43,6 +44,13 @@ h1 {
 #cityTemp, #cityHumidity, #cityWindSpeed, #cityUV {
   padding: 7px;
 }
-cityButton {
+.cityButton {
   width: 100px;
+  cursor: pointer;
+}
+#searchButton{
+
+  background-color: rgb(22, 128, 228);
+  color: white;
+  cursor: pointer;
 }
