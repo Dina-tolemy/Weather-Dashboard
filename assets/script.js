@@ -4,6 +4,7 @@ var cloudIcon = "https://image.flaticon.com/icons/png/512/1163/1163624.png";
 var rainIcon = "https://image.flaticon.com/icons/png/512/1375/1375394.png";
 var sunnyIcon = "https://image.flaticon.com/icons/png/512/861/861060.png";
 var PartlySunnyIcon = "https://image.flaticon.com/icons/png/512/1146/1146869.png";
+
 $("#searchButton").on("click", function (event) {
   event.preventDefault();
   displayCityButton();
@@ -19,10 +20,16 @@ function displayCityButton() {
   $(citylink).css("border-radius", "10px");
   $(citylink).css("border", " .5px solid rgb(111, 113, 114)");
   cityButton.text(city);
+  const userEntryKey = "city";
+  var cityButtonArray= localStorage.getItem(userEntryKey) ? JSON.parse(localStorage.getItem(userEntryKey)) : [];
+  localStorage.removeItem(userEntryKey);
+  cityButtonArray.push(city);
+  localStorage.setItem(userEntryKey, JSON.stringify(cityButtonArray));
+ // cityButton.text(JSON.parse(localStorage.getItem("city")));
   citylink.append(cityButton);
   cityButton.attr("data-name", city);
   $("#cities").append(citylink);
-
+  
   $(cityButton).on("click", function (event) {
     event.preventDefault();
     var cityButtonName = $(this).attr("data-name");
@@ -46,7 +53,7 @@ function displayCityWeather() {
 function callback(response) {
   displayMainSection(response);
   setDaysOfWeek(response);
-  console.log(response);
+  //console.log(response);
 }
 function displayMainSection(response) {
   $("#cityName").text(response.city.name + "  ");
